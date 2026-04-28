@@ -1,0 +1,12 @@
+DirectoryIndex index.php
+
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^(core|data|libs)/ - [F]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^pages/(.*)\.html$ index.php?page=$1 [QSA,L]
+RewriteRule ^page\.html$ index.php?page=page [L]

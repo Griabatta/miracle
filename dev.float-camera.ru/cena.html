@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цены на флоат-камеры Miracle</title>
+    <link rel="icon" href="https://float-camera.ru/favicon.ico" type="image/x-icon">
+    <style>
+        /* БАЗОВЫЕ СТИЛИ (Те же, что и везде) */
+        :root { --primary: #00695c; --secondary: #004d40; --accent: #d81b60; --text: #333; --light-bg: #f8f9fa; --white: #fff; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: var(--text); line-height: 1.6; background: var(--light-bg); }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* ШАПКА */
+        .top-bar { background: var(--secondary); color: white; padding: 8px 0; text-align: center; font-size: 0.9em; }
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
+        .main-menu { display: flex; gap: 20px; }
+        .main-menu a { font-weight: 500; color: #555; }
+        .main-menu a:hover { color: var(--primary); }
+        .menu-toggle { display: none; font-size: 26px; cursor: pointer; }
+
+        /* КОНТЕНТ */
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        h1 { color: var(--secondary); text-align: center; margin-bottom: 30px; }
+        
+        /* ТАБЛИЦА ЦЕН */
+        .price-box { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        
+        /* Адаптивная таблица (Scrollable) */
+        .table-wrapper { overflow-x: auto; } 
+        table { width: 100%; border-collapse: collapse; min-width: 600px; } /* min-width заставляет таблицу не сжиматься слишком сильно */
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: var(--primary); color: white; }
+        tr:hover { background: #f1f1f1; }
+        .price-val { font-weight: bold; color: var(--accent); font-size: 1.1em; }
+
+        /* Блок призыва к действию */
+        .cta { text-align: center; margin-top: 40px; padding: 30px; background: #e0f2f1; border-radius: 8px; }
+        .btn { background: var(--accent); color: white; padding: 12px 30px; border-radius: 5px; display: inline-block; margin-top: 15px; }
+
+        /* Футер */
+        footer { background: #263238; color: #cfd8dc; padding: 40px 0; margin-top: 50px; text-align: center; }
+
+        @media (max-width: 768px) {
+            .main-menu { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+            .main-menu.active { display: flex; }
+            .menu-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">Консультации: <a href="tel:89272528367" style="color:white">8-927-252-83-67</a></div>
+
+<header>
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+             <img src="https://float-camera.ru/media/images/logo.png" alt="Miracle" style="height: 40px;"> Miracle
+        </a>
+        <div class="menu-toggle" onclick="document.querySelector('.main-menu').classList.toggle('active')">☰</div>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="tovary.html">Наши работы</a></li>
+                <li><a href="stati.html">Статьи</a></li>
+                <li><a href="dokument.html">Документация</a></li>
+                <li><a href="cena.html" style="color:var(--primary); font-weight:bold;">Цена</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="https://float-camera-bufo.ru" target="_blank" style="color: var(--accent); font-weight: bold; border: 1px solid var(--accent); padding: 5px 10px; border-radius: 4px;">Premium BUFO</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Стоимость флоат-камеры Miracle</h1>
+    
+    <div class="price-box">
+        <p>Мы предлагаем лучшее соотношение цены и качества на российском рынке. Камера изготавливается индивидуально под ваши размеры.</p>
+        
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Наименование</th>
+                        <th>Описание</th>
+                        <th>Стоимость</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Флоат-камера Miracle</b><br>(Базовая комплектация)</td>
+                        <td>Полный комплект оборудования, система фильтрации, автоматика.</td>
+                        <td class="price-val">Уточняйте по телефону</td>
+                    </tr>
+                    <tr>
+                        <td><b>Монтаж и установка</b></td>
+                        <td>Выезд специалиста, сборка, запуск, обучение персонала.</td>
+                        <td class="price-val">Договорная</td>
+                    </tr>
+                    <tr>
+                        <td><b>Английская соль (Эпсома)</b></td>
+                        <td>Высший сорт, мешок 25 кг.</td>
+                        <td class="price-val">3 000 руб.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <p style="margin-top: 20px; font-size: 0.9em; color: #666;">* Цены могут меняться в зависимости от комплектации и текущих акций. Звоните для точного расчета.</p>
+    </div>
+
+    <div class="price-box">
+        <h2>Рассрочка и Кредит</h2>
+        <p>Мы понимаем, что открытие бизнеса требует вложений. Поэтому мы предлагаем гибкие условия оплаты:</p>
+        <ul>
+            <li>✅ Предоплата 50% при заказе.</li>
+            <li>✅ Оставшиеся 50% — перед отгрузкой.</li>
+            <li>✅ Возможность оформления в кредит через банки-партнеры.</li>
+        </ul>
+    </div>
+
+    <div class="cta">
+        <h3>Хотите получить коммерческое предложение?</h3>
+        <p>Оставьте заявку или позвоните нам прямо сейчас.</p>
+        <a href="tel:89272528367" class="btn">Позвонить 8-927-252-83-67</a>
+    </div>
+</div>
+
+<footer>
+    <div class="container"><p>&copy; 2010-2025 Miracle. Производство флоат-камер.</p></div>
+</footer>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(98871717, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/98871717" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

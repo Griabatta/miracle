@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Флоат-камеры Miracle</title>
+    <link rel="icon" href="https://float-camera.ru/favicon.ico" type="image/x-icon">
+    <style>
+        /* БАЗОВЫЕ СТИЛИ */
+        :root { --primary: #00695c; --secondary: #004d40; --accent: #d81b60; --text: #333; --light-bg: #f8f9fa; --white: #fff; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: var(--text); line-height: 1.6; background: var(--light-bg); }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* ШАПКА */
+        .top-bar { background: var(--secondary); color: white; padding: 8px 0; text-align: center; font-size: 0.9em; }
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
+        .main-menu { display: flex; gap: 20px; }
+        .main-menu a { font-weight: 500; color: #555; }
+        .main-menu a:hover { color: var(--primary); }
+        .menu-toggle { display: none; font-size: 26px; cursor: pointer; }
+
+        /* КОНТАКТЫ */
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        h1 { text-align: center; color: var(--secondary); margin-bottom: 40px; }
+        
+        .contact-card { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        
+        .contact-item { margin-bottom: 30px; }
+        .contact-item h3 { margin: 0 0 10px; color: #666; font-size: 1em; text-transform: uppercase; letter-spacing: 1px; }
+        .contact-val { font-size: 1.4em; color: var(--text); font-weight: bold; }
+        .contact-val a:hover { color: var(--accent); }
+
+        /* КНОПКИ МЕССЕНДЖЕРОВ */
+        .social-links { display: flex; justify-content: center; gap: 15px; margin-top: 30px; flex-wrap: wrap; }
+        .social-btn { display: inline-block; padding: 10px 25px; border-radius: 50px; color: white !important; font-weight: bold; min-width: 120px; }
+        
+        .wa { background: #25D366; } /* WhatsApp Green */
+        .tg { background: #0088cc; } /* Telegram Blue */
+        .max { background: #E60023; } /* Max Red (примерный цвет бренда) */
+        
+        .social-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        
+        .reqs { margin-top: 40px; font-size: 0.9em; color: #777; border-top: 1px solid #eee; padding-top: 20px; }
+
+        /* Футер */
+        footer { background: #263238; color: #cfd8dc; padding: 40px 0; margin-top: 50px; text-align: center; }
+
+        @media (max-width: 768px) {
+            .main-menu { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+            .main-menu.active { display: flex; }
+            .menu-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">Консультации: <a href="tel:89272528367" style="color:white">8-927-252-83-67</a></div>
+
+<header>
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+             <img src="https://float-camera.ru/media/images/logo.png" alt="Miracle" style="height: 40px;"> Miracle
+        </a>
+        <div class="menu-toggle" onclick="document.querySelector('.main-menu').classList.toggle('active')">☰</div>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="tovary.html">Наши работы</a></li>
+                <li><a href="stati.html">Статьи</a></li>
+                <li><a href="dokument.html">Документация</a></li>
+                <li><a href="cena.html">Цена</a></li>
+                <li><a href="contact.html" style="color:var(--primary); font-weight:bold;">Контакты</a></li>
+                <li><a href="https://float-camera-bufo.ru" target="_blank" style="color: var(--accent); font-weight: bold; border: 1px solid var(--accent); padding: 5px 10px; border-radius: 4px;">Premium BUFO</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Свяжитесь с нами</h1>
+    
+    <div class="contact-card">
+        <div class="contact-item">
+            <h3>Телефоны (круглосуточно)</h3>
+            <div class="contact-val"><a href="tel:89272528367">8-927-252-83-67</a></div>
+            <div class="contact-val"><a href="tel:89272535151">8-927-253-51-51</a></div>
+            <p><small>Звонки по России бесплатны</small></p>
+        </div>
+
+        <div class="contact-item">
+            <h3>Электронная почта</h3>
+            <div class="contact-val"><a href="mailto:float-camera@mail.ru">float-camera@mail.ru</a></div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://wa.me/+79272528367" class="social-btn wa" target="_blank">WhatsApp</a>
+            <a href="https://t.me/+79272535151" class="social-btn tg" target="_blank">Telegram</a>
+            <!-- Ссылка на Max взята из вашего старого сайта, соответствующая номеру владельца -->
+            <a href="https://max.ru/u/f9LHodD0cOKl5EAM667DlSemAIIP_fjs0OUJh1Ni7Hxkt0jk7AFczoJpCQA" class="social-btn max" target="_blank">Max</a>
+        </div>
+
+        <div class="reqs">
+            <p><b>ИП Шуляков А.Г.</b></p>
+            <p>Производство находится в <b>г. Камышин</b>.</p>
+            <p>Мы работаем по всей России и СНГ.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container"><p>&copy; 2010-2025 Miracle. Производство флоат-камер.</p></div>
+</footer>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(98871717, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/98871717" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>

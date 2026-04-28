@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Флоат-камеры Miracle | Производство и продажа</title>
+    <meta name="description" content="Флоат-камеры российского производства Miracle. Изготовление, продажа, установка. Срок службы неограничен. Гарантия и обслуживание.">
+    <meta name="keywords" content="флоат-камера купить, флоатинг оборудование, флоат капсула цена, бизнес план флоатинг">
+    
+    <!-- Иконка сайта -->
+    <link rel="icon" href="https://float-camera.ru/favicon.ico" type="image/x-icon">
+
+    <!-- Стили (CSS) -->
+    <style>
+        :root {
+            --primary: #00695c;
+            --secondary: #004d40;
+            --accent: #d81b60;
+            --text: #333;
+            --light-bg: #f8f9fa;
+            --white: #fff;
+        }
+        
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: var(--text); line-height: 1.6; background: #fff; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+        ul { padding: 0; margin: 0; list-style: none; }
+        img { max-width: 100%; height: auto; }
+
+        /* Шапка */
+        .top-bar { background: var(--secondary); color: white; padding: 8px 0; text-align: center; font-size: 0.9em; }
+        .top-bar a { color: #fff; text-decoration: underline; }
+        
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
+        
+        /* Меню */
+        .main-menu { display: flex; gap: 20px; }
+        .main-menu a { font-weight: 500; color: #555; font-size: 15px; }
+        .main-menu a:hover { color: var(--primary); }
+        .menu-toggle { display: none; font-size: 26px; cursor: pointer; }
+
+        /* Баннер */
+        .hero { 
+            background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.7)), url('https://float-camera.ru/images/float-camera%20miracle_0.jpg');
+            background-size: cover; background-position: center; 
+            color: white; padding: 80px 20px; text-align: center;
+        }
+        .hero h1 { margin: 0 0 10px; font-size: 2.5em; }
+        .hero p { font-size: 1.2em; margin-bottom: 25px; }
+        .btn { background: var(--accent); color: white !important; padding: 12px 30px; border-radius: 5px; font-weight: bold; display: inline-block; text-decoration: none; }
+        .btn:hover { background: #ad1457; transform: translateY(-2px); }
+
+        /* Сетка контента */
+        .layout-grid { display: grid; grid-template-columns: 3fr 1fr; gap: 40px; max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        
+        /* Левая колонка (Контент) */
+        .content h2 { color: var(--secondary); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .info-box { background: #e0f2f1; padding: 20px; border-left: 5px solid var(--primary); margin: 20px 0; border-radius: 4px; }
+        .cta-box { text-align: center; border: 2px dashed var(--primary); padding: 30px; margin-top: 30px; border-radius: 10px; }
+        .cta-box h3 { color: var(--accent); margin-top: 0; }
+        .cta-phone { font-size: 1.5em; font-weight: bold; display: block; margin: 10px 0; }
+
+        /* Правая колонка (Сайдбар) */
+        aside { font-size: 0.95em; }
+        .sidebar-block { background: var(--light-bg); padding: 20px; border-radius: 8px; margin-bottom: 30px; border: 1px solid #eee; }
+        .sidebar-block h3 { margin-top: 0; color: var(--secondary); font-size: 1.2em; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 15px; }
+        .sidebar-menu li { margin-bottom: 10px; border-bottom: 1px dotted #ccc; padding-bottom: 5px; }
+        .sidebar-menu li:last-child { border: none; }
+        .sidebar-menu ul { padding-left: 15px; margin-top: 5px; }
+        .sidebar-menu ul li { font-size: 0.9em; border: none; margin-bottom: 5px; }
+
+        /* Футер */
+        footer { background: #263238; color: #cfd8dc; padding: 40px 0; margin-top: 50px; font-size: 0.9em; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        
+        /* Адаптив */
+        @media (max-width: 900px) {
+            .layout-grid { grid-template-columns: 1fr; }
+            .sidebar-block { display: none; } /* Скрываем сайдбар на мобильных для компактности, или можно оставить */
+            .main-menu { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+            .main-menu.active { display: flex; }
+            .menu-toggle { display: block; }
+            .hero h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(98871717, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/98871717" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<div class="top-bar">
+    Консультации круглосуточно: <a href="tel:89272528367">8-927-252-83-67</a> (Звонок по РФ бесплатный)
+</div>
+
+<header>
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="https://float-camera.ru/media/images/logo.png" alt="Miracle Logo" style="height: 40px;">
+            Miracle
+        </a>
+        <div class="menu-toggle" onclick="document.querySelector('.main-menu').classList.toggle('active')">?</div>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="index.html" style="color:var(--primary); font-weight:bold;">Главная</a></li>
+                <li><a href="tovary.html">Наши работы</a></li>
+                <li><a href="stati.html">Статьи</a></li>
+                <li><a href="dokument.html">Документация</a></li>
+                <li><a href="cena.html">Цена</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="https://float-camera-bufo.ru" target="_blank" style="color: var(--accent); font-weight: bold; border: 1px solid var(--accent); padding: 5px 10px; border-radius: 4px;">Premium BUFO</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Флоат-камеры Miracle</h1>
+    <p>Производство, продажа и установка оборудования для флоатинга с 2010 года</p>
+    <a href="kalkulator.html" class="btn">Рассчитать стоимость</a>
+</section>
+
+<div class="layout-grid">
+    <!-- Основной контент -->
+    <main class="content">
+        <h2>Оборудование для флоатинга от производителя</h2>
+        
+        <p><b>Флоат-камера Miracle</b> – это профессиональное оборудование российского производства. Мы занимаемся изготовлением камер уже более 15 лет и за это время установили свыше 200 комплексов по всей России и СНГ.</p>
+        
+        <div class="info-box">
+            <p><strong>Почему выбирают Miracle?</strong></p>
+            <p>Каждая камера изготавливается по индивидуальным требованиям заказчика. Она гармонично вписывается в любое помещение, сохраняя мобильность и простоту обслуживания.</p>
+        </div>
+
+        <h3>Преимущества для бизнеса</h3>
+        <p><b>Быстрая окупаемость.</b> Флоатинг-камера Miracle — это одно из лучших предложений на рынке по соотношению цена/качество. Мы предлагаем самую приятную цену при сохранении высоких стандартов надежности.</p>
+        
+        <ul>
+            <li>? <b>Срок изготовления:</b> всего 10 рабочих дней.</li>
+            <li>? <b>Гарантия:</b> 1 год (реальный срок службы неограничен, требуется только замена расходников).</li>
+            <li>? <b>Старт:</b> уже через 2 недели после заказа вы можете принимать первых клиентов.</li>
+            <li>? <b>Поддержка:</b> полный набор расходников на первый год эксплуатации в комплекте.</li>
+        </ul>
+
+        <p>Мы с радостью поделимся с Вами <a href="istoria.html" style="color:var(--primary)">опытом ведения бизнеса</a> и маркетинговыми рекомендациями по продвижению. Приобретая наше оборудование, вы автоматически попадаете в крупнейший каталог флоат-центров.</p>
+
+        <p>Флоат-камера Miracle имеет <b><a href="dokument.html" style="color:var(--primary)">сертификат соответствия</a></b>.</p>
+
+        <div class="cta-box">
+            <h3>Узнайте цену и условия поставки</h3>
+            <p>Мы являемся единственным производителем флоат-камер Miracle.</p>
+            <a href="tel:89272528367" class="cta-phone">8-927-252-83-67</a>
+            <p>Пишите нам: <a href="mailto:shulyakoff@mail.ru">shulyakoff@mail.ru</a></p>
+            <a href="contact.html" class="btn">Связаться с нами</a>
+        </div>
+    </main>
+
+    <!-- Сайдбар (Боковое меню) -->
+    <aside>
+        <div class="sidebar-block">
+            <h3>Полезная информация</h3>
+            <ul class="sidebar-menu">
+                <li><a href="stati36.html">Как выбрать флоат-камеру?</a></li>
+                <li><a href="complect.html">Комплектация камеры</a></li>
+                <li><a href="plan.html">Бизнес-план</a></li>
+                <li><a href="rassroshka.html">Рассрочка / Кредит</a></li>
+                <li><a href="filtr.html">Система фильтрации</a></li>
+                <li><a href="gvozdi.html">Доски Садху (Гвозди)</a></li>
+                <li><a href="otzyv.html">Отзывы заказчиков</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-block">
+            <h3>Исследования</h3>
+            <ul class="sidebar-menu">
+                <li><a href="stati11.html">Флоатинг в спорте</a></li>
+                <li><a href="stati13.html">Беременность</a></li>
+                <li><a href="stati15.html">Фибромиалгия</a></li>
+                <li><a href="stati14.html">Снятие боли</a></li>
+                <li><a href="stati16.html">Выработка эндорфинов</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-block" style="text-align: center;">
+            <a href="tovary.html">
+                <img src="https://float-camera.ru/media/images/4-41.jpg" alt="Флоат камера пример" style="border-radius: 5px; margin-bottom: 10px;">
+                <br><b>Примеры работ</b>
+            </a>
+        </div>
+    </aside>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div>
+            <h4>Miracle Float</h4>
+            <p>&copy; 2010-2025 Производство флоат-камер.</p>
+        </div>
+        <div>
+            <h4>Контакты</h4>
+            <p>Тел: 8-927-252-83-67</p>
+            <p>Email: shulyakoff@mail.ru</p>
+        </div>
+        <div>
+             <!-- Сюда можно вернуть счетчики если нужно -->
+        </div>
+    </div>
+</footer>
+
+<!-- JivoSite Widget -->
+<script type='text/javascript'>
+(function(){ var widget_id = '100496';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+User-Agent: YadirectBot
+Disallow:
+
+User-Agent: YandexDirect
+Disallow:
+
+User-Agent: *
+Host: float-camera.ru
+Sitemap: http://float-camera.ru/sitemap.xml

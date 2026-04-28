@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документация и Сертификаты | Miracle</title>
+    <link rel="icon" href="https://float-camera.ru/favicon.ico" type="image/x-icon">
+    <style>
+        /* БАЗОВЫЕ СТИЛИ */
+        :root { --primary: #00695c; --secondary: #004d40; --accent: #d81b60; --text: #333; --light-bg: #f8f9fa; --white: #fff; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: var(--text); line-height: 1.6; background: var(--light-bg); }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* ШАПКА */
+        .top-bar { background: var(--secondary); color: white; padding: 8px 0; text-align: center; font-size: 0.9em; }
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
+        .main-menu { display: flex; gap: 20px; }
+        .main-menu a { font-weight: 500; color: #555; }
+        .main-menu a:hover { color: var(--primary); }
+        .menu-toggle { display: none; font-size: 26px; cursor: pointer; }
+
+        /* ДОКУМЕНТЫ */
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        h1 { text-align: center; color: var(--secondary); margin-bottom: 40px; }
+        
+        .docs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        
+        .doc-item { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+        .doc-item:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        
+        .doc-item img { width: 100%; height: auto; border: 1px solid #eee; margin-bottom: 15px; }
+        .doc-title { font-weight: bold; color: var(--primary); }
+
+        footer { background: #263238; color: #cfd8dc; padding: 40px 0; margin-top: 50px; text-align: center; }
+
+        @media (max-width: 768px) {
+            .main-menu { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+            .main-menu.active { display: flex; }
+            .menu-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">Консультации: <a href="tel:89272528367" style="color:white">8-927-252-83-67</a></div>
+
+<header>
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+             <img src="https://float-camera.ru/media/images/logo.png" alt="Miracle" style="height: 40px;"> Miracle
+        </a>
+        <div class="menu-toggle" onclick="document.querySelector('.main-menu').classList.toggle('active')">☰</div>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="tovary.html">Наши работы</a></li>
+                <li><a href="stati.html">Статьи</a></li>
+                <li><a href="dokument.html" style="color:var(--primary); font-weight:bold;">Документация</a></li>
+                <li><a href="cena.html">Цена</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                 <li><a href="https://float-camera-bufo.ru" target="_blank" style="color: var(--accent); font-weight: bold; border: 1px solid var(--accent); padding: 5px 10px; border-radius: 4px;">Premium BUFO</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Сертификаты и Документация</h1>
+    
+    <div class="docs-grid">
+        
+        <!-- Документ 1 -->
+        <div class="doc-item">
+            <!-- Замените sertifikat1.jpg на реальное имя файла сертификата -->
+            <a href="https://float-camera.ru/media/images/diplom1-1.jpg" target="_blank">
+                <img src="diplom1-1.jpg" alt="Диплом1">
+            </a>
+            <div class="doc-title">Диплом участника выставки ЗОЖ 2014</div>
+        </div>
+
+        <!-- Документ 2 (Если есть еще) -->
+         
+         <div class="doc-item">
+            <a href="https://float-camera.ru/media/images/diplom2-1.jpg" target="_blank">
+                <img src="diplom2-1.jpg" alt="Диплом2"
+            </a>
+            <div class="doc-title">Диплом участника выставки ЗОЖ 2016</div>
+        </div> 
+       
+	   <!-- Документ 3 (Если есть еще) -->
+         
+         <div class="doc-item">
+            <a href="https://float-camera.ru/media/images/diplom3-1.jpg" target="_blank">
+                <img src="diplom3-1.jpg" alt="Диплом3"
+            </a>
+            <div class="doc-title">Диплом участника выставки ЗОЖ Белоруссии 2017</div>
+        </div> 
+
+    </div>
+    
+    <div style="margin-top: 40px; text-align: center;">
+        <p>Наше оборудование полностью сертифицировано и безопасно для использования.</p>
+        <p>Мы предоставляем полный пакет документов при покупке: Договор, Паспорт изделия, Инструкция по эксплуатации, Декларация соответствия</p>
+    </div>
+</div>
+
+<footer>
+    <div class="container"><p>&copy; 2010-2025 Miracle. Производство флоат-камер.</p></div>
+</footer>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(98871717, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/98871717" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статьи о флоатинге | Miracle</title>
+    <link rel="icon" href="https://float-camera.ru/favicon.ico" type="image/x-icon">
+    <style>
+        /* БАЗОВЫЕ СТИЛИ */
+        :root { --primary: #00695c; --secondary: #004d40; --accent: #d81b60; --text: #333; --light-bg: #f8f9fa; --white: #fff; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: var(--text); line-height: 1.6; background: var(--light-bg); }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* ШАПКА */
+        .top-bar { background: var(--secondary); color: white; padding: 8px 0; text-align: center; font-size: 0.9em; }
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
+        .main-menu { display: flex; gap: 20px; }
+        .main-menu a { font-weight: 500; color: #555; }
+        .main-menu a:hover { color: var(--primary); }
+        .menu-toggle { display: none; font-size: 26px; cursor: pointer; }
+
+        /* МАКЕТ С САЙДБАРОМ */
+        .layout-grid { display: grid; grid-template-columns: 3fr 1fr; gap: 40px; max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+
+        /* СПИСОК СТАТЕЙ */
+        h1 { text-align: center; color: var(--secondary); margin-top: 0; margin-bottom: 30px; }
+        
+        .article-content { /* Обертка для списка */ }
+        
+        .article-list { background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 20px; }
+        .article-item { border-bottom: 1px solid #eee; padding: 20px 0; }
+        .article-item:last-child { border-bottom: none; }
+        
+        .article-title { font-size: 1.3em; font-weight: bold; color: var(--primary); display: block; margin-bottom: 5px; }
+        .article-title:hover { color: var(--accent); }
+        .article-desc { color: #666; font-size: 0.95em; }
+
+        /* САЙДБАР */
+        aside { font-size: 0.95em; }
+        .sidebar-block { background: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; border: 1px solid #eee; }
+        .sidebar-block h3 { margin-top: 0; color: var(--secondary); font-size: 1.1em; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 15px; }
+        .sidebar-menu { list-style: none; padding: 0; }
+        .sidebar-menu li { margin-bottom: 10px; border-bottom: 1px dotted #eee; padding-bottom: 5px; }
+        .sidebar-menu a:hover { color: var(--accent); }
+
+        footer { background: #263238; color: #cfd8dc; padding: 40px 0; margin-top: 50px; text-align: center; }
+
+        /* АДАПТИВНОСТЬ */
+        @media (max-width: 900px) {
+            .layout-grid { grid-template-columns: 1fr; } /* Одна колонка */
+            .article-list { padding: 15px; }
+            
+            .main-menu { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+            .main-menu.active { display: flex; }
+            .menu-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">Консультации: <a href="tel:89272528367" style="color:white">8-927-252-83-67</a></div>
+
+<header>
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+             <img src="https://float-camera.ru/media/images/logo.png" alt="Miracle" style="height: 40px;"> Miracle
+        </a>
+        <div class="menu-toggle" onclick="document.querySelector('.main-menu').classList.toggle('active')">☰</div>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="tovary.html">Наши работы</a></li>
+                <li><a href="stati.html" style="color:var(--primary); font-weight:bold;">Статьи</a></li>
+                <li><a href="dokument.html">Документация</a></li>
+                <li><a href="cena.html">Цена</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                 <li><a href="https://float-camera-bufo.ru" target="_blank" style="color: var(--accent); font-weight: bold; border: 1px solid var(--accent); padding: 5px 10px; border-radius: 4px;">Premium BUFO</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="layout-grid">
+    
+    <!-- Основной контент -->
+    <main class="article-content">
+        <h1>Все о флоатинге</h1>
+        
+        <div class="article-list">
+            
+            <div class="article-item">
+                <a href="stati36.html" class="article-title">Как выбрать флоат-камеру?</a>
+                <div class="article-desc">Важные советы для тех, кто планирует покупку оборудования. На что обратить внимание при выборе производителя.</div>
+            </div>
+            <div class="article-item">
+                <a href="plan.html" class="article-title">Бизнес-план флоат-студии</a>
+                <div class="article-desc">Расчет окупаемости, необходимые вложения и советы по открытию бизнеса на флоатинге.</div>
+            </div>
+             <div class="article-item">
+                <a href="stati54.html" class="article-title">Как «приплыть» в тета-состояние?</a>
+                <div class="article-desc">Что такое тета-состояние и как флоатинг помогает его достичь.</div>
+            </div>
+            
+             <div class="article-item">
+                <a href="stati53.html" class="article-title">Задачка со «звёздочкой»</a>
+                <div class="article-desc">как перенести камеру в другое помещение при очень узком лестничном проходе</div>
+            </div>
+            
+             <div class="article-item">
+                <a href="stati51.html" class="article-title">Панацея – теперь это возможно?!</a>
+                <div class="article-desc">Включите флоатинг в ваш обычный образ жизни</div>
+            </div>
+
+             <div class="article-item">
+                <a href="stati50.html" class="article-title">Как избавиться от выгорания</a>
+                <div class="article-desc">Стресс в современной жизни, выгорание и флоатинг - как способ выживания </div>
+            </div>
+            
+            <div class="article-item">
+                <a href="stati48.html" class="article-title">Чем флоатинг полезен для кожи?</a>
+                <div class="article-desc">Эффекты флоатинга и соли Эпсома на кожу </div>
+            </div>
+            <div class="article-item">
+                <a href="stati47.html" class="article-title">Почему нужно хотя бы раз в жизни попробовать флоатинг</a>
+                <div class="article-desc">Флоатинг для всех</div>
+            </div>
+            <div class="article-item">
+                <a href="stati46.html" class="article-title">Флоат-терапия зависимостей</a>
+                <div class="article-desc">Флоат-терапия курения, переедания и др. зависимостей</div>
+            </div>
+            <div class="article-item">
+                <a href="stati45.html" class="article-title">Надежды на флоатинг (флоатинг и ПТСР)</a>
+                <div class="article-desc">Флоат-терапия ПТСР, исследования мозга</div>
+            </div>
+            <div class="article-item">
+                <a href="stati44.html" class="article-title">Флот-камеры как лекарство от стресса и боли</a>
+                <div class="article-desc">перевод статьи</div>
+            </div>
+            <div class="article-item">
+                <a href="stati43.html" class="article-title">Флоатинг и мигрень</a>
+                <div class="article-desc">Флоат-терапия не заменит лечение, но может облегчить состояние при мигрени</div>
+            </div>
+            <div class="article-item">
+                <a href="stati40.html" class="article-title">9 причин просто побыть одному</a>
+                <div class="article-desc">В современном мире мы постоянно окружены информационным шумом. Флоатинг дает уникальную возможность побыть в полной тишине наедине с собой.</div>
+            </div>
+            
+            <div class="article-item">
+                <a href="stati38.html" class="article-title">Улучшение бронхиального дыхания. Флоатинг и астма.</a>
+                <div class="article-desc">4 ключевых момента в флот терапии, которые улучшают дыхание и ослабляют астматические симптомы</div>
+            </div>
+            <div class="article-item">
+                <a href="stati35.html" class="article-title">Снимаем стресс после работы</a>
+                <div class="article-desc">Лучший способ справиться со стрессом- флоат-терапия.</div>
+            </div>
+            <div class="article-item">
+                <a href="stati34.html" class="article-title">Аутизм - как флоатинг может помочь</a>
+                <div class="article-desc">Способ помочь детям, страдающим аутизмом, получить облегчение от постоянной перестимуляции в повседневной жизни.</div>
+            </div>
+            <div class="article-item">
+                <a href="stati33.html" class="article-title">Флоатинг для самых стрессовых специальностей</a>
+                <div class="article-desc">Согласно списку Forbes, вот некоторые самые стрессовые рабочие места</div>
+            </div>
+            <div class="article-item">
+                <a href="stati32.html" class="article-title">4 совета для размышления и медитации во время флоатинга</a>
+                <div class="article-desc">Попробуйте следующие советы, чтобы улучшить Ваш опыт медитации во время флоатинга.</div>
+            </div>
+            <div class="article-item">
+                <a href="stati31.html" class="article-title">Флоатинг вызывает галлюцинации?</a>
+                <div class="article-desc">Что делает мозг во время флоатинга?</div>
+            </div>
+            <div class="article-item">
+                <a href="stati30.html" class="article-title">Статья из журнала Discover Magazine</a>
+                <div class="article-desc">апрель 2014 (перевод)</div>
+            </div>
+            <div class="article-item">
+                <a href="stati29.html" class="article-title">Лечение зависимостей</a>
+                <div class="article-desc">Как флоат-терапия может помочь?</div>
+            </div>
+            <div class="article-item">
+                <a href="stati28.html" class="article-title">Флоатинг - альтернатива пластическим операциям</a>
+                <div class="article-desc">Как флоатинг может снизить потребность в пластической хирургии</div>
+            </div>
+            <div class="article-item">
+                <a href="stati26.html" class="article-title">Флоатинг и псориаз</a>
+                <div class="article-desc">Исследование лечения флоатингом психосоматической болезни - псориаза.</div>
+            </div>
+            <div class="article-item">
+                <a href="stati25.html" class="article-title">Флоатинг и депрессия</a>
+                <div class="article-desc">Некоторые болезненные явления, ассоциируемые с высоким уровнем стресса, могу т быть успешно преодолены флоат-терапией.</div>
+            </div>
+            <div class="article-item">
+                <a href="stati24.html" class="article-title">Флоатинг – как профилактика рака молочной железы</a>
+                <div class="article-desc">10 советов д-ра Нотропа по поддержанию хорошего здоровья женщин</div>
+            </div>
+            <div class="article-item">
+                <a href="stati23.html" class="article-title">3 мифа о сне во время флоатинга</a>
+                <div class="article-desc">Объясняем всю неразбериху между плаванием и сном</div>
+            </div>
+            <div class="article-item">
+                <a href="stati22.html" class="article-title">Флоатинг при сколиозе</a>
+                <div class="article-desc">Флоатинг полезен для пациентов со сколиозом из-за естественного облегчения боли во время терапии</div>
+            </div>
+            <div class="article-item">
+                <a href="stati21.html" class="article-title">Косметический эффект флоатинга</a>
+                <div class="article-desc">Отсутствие гравитации позволяет расслабиться глубинным мышцам лица, до которых не добраться ботоксу.</div>
+            </div>
+            <div class="article-item">
+                <a href="stati20.html" class="article-title">Флоатинг и йога</a>
+                <div class="article-desc">Дуэт этих двух практик поможет омолодить и укрепить Ваше тело , дать ощущение силы и свежести.</div>
+            </div>
+            <div class="article-item">
+                <a href="stati19.html" class="article-title">Флоатинг и похудение</a>
+                <div class="article-desc">Флоат-камера является действенным инструментом в программе снижения веса</div>
+            </div>
+            <div class="article-item">
+                <a href="stati18.html" class="article-title">Результаты исследований</a>
+                <div class="article-desc">Использования флоат-терапии в остеопатии и другие исследования</div>
+            </div>
+            <div class="article-item">
+                <a href="stati17.html" class="article-title">Заболевания, для лечения которых применяется флоат-терапия</a>
+                <div class="article-desc">Заболевания мышц, костей и ревматические проблемы.</div>
+            </div>
+            <div class="article-item">
+                <a href="stati16.html" class="article-title">Эндорфины</a>
+                <div class="article-desc">Самым эффективным способом стимуляции естественной выработки эндорфинов считается процедура флоатинг.</div>
+            </div>
+            <div class="article-item">
+                <a href="stati15.html" class="article-title">Флоатинг и фибромиалгия</a>
+                <div class="article-desc">Фибромиалгия – это болезнь, для которой характерна тупая скелетно-мышечная боль, обычно начинающаяся в мышцах.</div>
+            </div>
+            
+            <div class="article-item">
+                <a href="stati11.html" class="article-title">Флоатинг в спорте</a>
+                <div class="article-desc">Почему профессиональные спортсмены используют сенсорную депривацию для восстановления.</div>
+            </div>
+
+            <div class="article-item">
+                <a href="stati13.html" class="article-title">Флоатинг при беременности</a>
+                <div class="article-desc">Польза невесомости для будущих мам. Снятие нагрузки с позвоночника.</div>
+            </div>
+            
+             <div class="article-item">
+                <a href="stati1.html" class="article-title">Флоатинг - фитнес для души и тела</a>
+                <div class="article-desc">В бесконечной гонке под названием «жизнь» каждый из нас, хотя бы раз, мечтал 
+                спрятаться от шума, огней, скоростей, правил современного мира и остаться наедине только с самим собой.</div>
+            </div>
+
+            <div class="article-item">
+                <a href="stati2.html" class="article-title">Ощущения от флоатинга</a>
+                <div class="article-desc">Что чувствует человек в камере? Самые распространенные отзывы и переживания.</div>
+            </div>
+            <div class="article-item">
+                <a href="stati3.html" class="article-title">О флоатинге</a>
+                <div class="article-desc">Флоатинг выключает сознание и одновременно включает подсознание, то есть создает условия, 
+                в которых человек может полностью активизировать свой творческий потенциал.</div>
+            </div>
+            
+             <div class="article-item">
+                <a href="stati4.html" class="article-title">Правила успешного флоатинга</a>
+                <div class="article-desc">Важен эмоциональный настрой, умение расслабляться и даже интервал 
+                между последним приемом пищи и сеансом флоатинга.</div>
+            </div>
+            <div class="article-item">
+                <a href="stati5.html" class="article-title">Отзывы посетивших флоат-камеру</a>
+                <div class="article-desc">Что говорят люди после посещения флоат-камеры</div>
+            </div>
+            <div class="article-item">
+                <a href="stati6.html" class="article-title">Для всех</a>
+                <div class="article-desc">Эффекты флоатинга</div>
+            </div>
+        <div class="article-item">
+                <a href="stati9.html" class="article-title">Для йогов</a>
+                <div class="article-desc">Флоатинг - незаменимое подспорье для серьезной практики йоги</div>
+            </div>
+        <div class="article-item">
+                <a href="stati10.html" class="article-title">Для бизнесменов</a>
+                <div class="article-desc">Флоат-камеры – настоящее спасение для тех, кому приходится 
+                часто совершать перелеты или длительные поездки.</div>
+            </div>
+            
+             <div class="article-item">
+                <a href="gvozdi.html" class="article-title">Доски Садху (Гвозди)</a>
+                <div class="article-desc">Наше производство досок с гвоздями для йоги и медитации.</div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- САЙДБАР (Боковое меню) -->
+    <aside>
+        <div class="sidebar-block">
+            <h3>Популярное</h3>
+            <ul class="sidebar-menu">
+                <li><a href="stati36.html">Как выбрать флоат-камеру?</a></li>
+                <li><a href="plan.html">Бизнес-план студии</a></li>
+                <li><a href="cena.html">Стоимость оборудования</a></li>
+                <li><a href="complect.html">Комплектация</a></li>
+                <li><a href="filtr.html">Система фильтрации</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-block">
+            <h3>Исследования</h3>
+            <ul class="sidebar-menu">
+                <li><a href="stati11.html">Флоатинг в спорте</a></li>
+                <li><a href="stati13.html">Беременность и флоатинг</a></li>
+                <li><a href="stati15.html">Лечение фибромиалгии</a></li>
+                <li><a href="stati16.html">Эндорфины и счастье</a></li>
+            </ul>
+        </div>
+        
+        <div class="sidebar-block" style="text-align: center; border:none; background: transparent;">
+             <a href="tel:89272528367" style="display:inline-block; background: var(--accent); color:white; padding: 10px 20px; border-radius:5px; font-weight:bold;">Заказать звонок</a>
+        </div>
+    </aside>
+
+</div>
+
+<footer>
+    <div class="container"><p>&copy; 2010-2025 Miracle. Производство флоат-камер.</p></div>
+</footer>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(98871717, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/98871717" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>
