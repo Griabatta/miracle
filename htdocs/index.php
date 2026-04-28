@@ -1,34 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Флоат-камеры Miracle | Производство и продажа</title>
-    <meta name="description" content="Флоат-камеры Miracle: производство, продажа, установка и сопровождение оборудования для флоатинга по России.">
-    <link rel="icon" href="https://float-camera.ru/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/miracle-redesign.css">
-</head>
-<body>
-<div class="top-bar">Консультации круглосуточно: <a href="tel:89272528367">8-927-252-83-67</a></div>
-<header class="site-header">
-    <div class="container nav-container">
-        <a href="index.html" class="logo" aria-label="Miracle">
-            <span>MIRACLE</span>
-        </a>
-        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" data-menu-toggle>☰</button>
-        <nav aria-label="Основное меню">
-            <ul class="main-menu">
-                <li><a href="index.html" class="active">Главная</a></li>
-                <li><a href="tovary.html">Наши работы</a></li>
-                <li><a href="stati.html">Статьи</a></li>
-                <li><a href="dokument.html">Документация</a></li>
-                <li><a href="cena.html">Цена</a></li>
-                <li><a href="contact.html">Контакты</a></li>
-                <li><a class="premium-link" href="https://float-camera-bufo.ru" target="_blank" rel="noopener">Premium BUFO</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<?php
+$page_title = 'Флоат-камеры Miracle | Производство и продажа';
+$meta_description = 'Флоат-камеры Miracle: производство, продажа, установка и сопровождение оборудования для флоатинга по России.';
+$active = 'home';
+include __DIR__ . '/includes/header.php';
+?>
 <section class="hero">
     <div class="container hero-inner">
         <div class="hero-copy">
@@ -173,44 +148,4 @@
         </div>
     </div>
 </section>
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div>
-                <div class="footer-logo">MIRACLE</div>
-                <p>Флоат-камеры и оборудование<br>для флоатинга с 2010 года</p>
-            </div>
-            <div>
-                <h4>Навигация</h4>
-                <p><a href="index.html">Главная</a></p>
-                <p><a href="tovary.html">Наши работы</a></p>
-                <p><a href="stati.html">Статьи</a></p>
-            </div>
-            <div>
-                <h4>Разделы</h4>
-                <p><a href="dokument.html">Документация</a></p>
-                <p><a href="cena.html">Цена</a></p>
-                <p><a href="contact.html">Контакты</a></p>
-            </div>
-            <div>
-                <h4>Контакты</h4>
-                <p><a href="tel:89272528367">8-927-252-83-67</a></p>
-                <p><a href="mailto:shulyakoff@mail.ru">shulyakoff@mail.ru</a></p>
-                <h4>Мы в соцсетях</h4>
-                <div class="socials"><span>Т</span><span>VK</span><span>▶</span></div>
-            </div>
-        </div>
-        <div class="copyright">
-            <span>© 2010–2026 MIRACLE. Все права защищены.</span>
-            <a href="privacy.html">Политика конфиденциальности</a>
-        </div>
-    </div>
-</footer>
-<script src="assets/js/miracle-redesign.js"></script>
-<!-- JivoSite Widget -->
-<script type='text/javascript'>
-(function(){ var widget_id = '100496';
-var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();
-</script>
-</body>
-</html>
+<?php include __DIR__ . '/includes/footer.php'; ?>
